@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #adacac;
+}
+
+header {
+  background-color: #333;
+  color: white;
+}
+
+.section {
+  margin: 20px auto;
+  padding: 80px;
+  max-width: 420px;
+  border: 1px solid gray;
+  box-shadow: /*ketu luteni ta beni vete */;
+}
+
+#question-zone,
+#result-zone {
+  display: none;
+}
