@@ -14,7 +14,7 @@ header {
 .section {
   margin: 20px auto;
   padding: 20px;
-  max-width: 420px;
+  max-width: 70%;
   border: 1px solid gray;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
@@ -31,6 +31,10 @@ header {
   padding: 5px 12px;
   border: none;
   min-width: 90px;
+}
+
+.section button:hover {
+  color: #cc0a11;
 }
 
 #question-zone,
