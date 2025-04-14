@@ -44,6 +44,7 @@ function startPhysics() {
   const button1 = document.getElementById("b1");
   const button2 = document.getElementById("b2");
   const correctAnswer = document.getElementById("answer");
+  const startAgain = document.getElementById("startAgain");
 
   topicZone.style.display = "none";
   questionZone.style.display = "block";
@@ -61,14 +62,15 @@ function startPhysics() {
       correctAnswer.textContent = "Gabim!";
       correctAnswer.style.color = "red";
     }
-    if (currentQuestion < 5) {
+    if (currentQuestion < physicsQuestions.length - 1) {
       currentQuestion++;
       setTimeout(() => showQuestion(currentQuestion), 1000);
     } else {
       setTimeout(() => {
         questionZone.style.display = "none";
         resultZone.style.display = "block";
-        resultZone.textContent = `Kuizi mbaroi! Pikët: ${score}/6`;
+        resultZone.textContent = `Kuizi mbaroi! Pikët: ${score}/${physicsQuestions.length}`;
+        resultZone.textContent = startAgain;
       }, 1000);
     }
   });
@@ -83,14 +85,16 @@ function startPhysics() {
       correctAnswer.textContent = "Gabim!";
       correctAnswer.style.color = "red";
     }
-    if (currentQuestion < 5) {
+    if (currentQuestion < physicsQuestions.length - 1) {
       currentQuestion++;
       setTimeout(() => showQuestion(currentQuestion), 1000);
     } else {
       setTimeout(() => {
         questionZone.style.display = "none";
         resultZone.style.display = "block";
-        resultZone.textContent = `Kuizi mbaroi! Pikët: ${score}/6`;
+        resultZone.textContent = `Kuizi mbaroi! Pikët: ${score}/${physicsQuestions.length}`;
+        resultZone.textContent = startAgain;
+        startOver.textContent = "block";
       }, 1000);
     }
   });
