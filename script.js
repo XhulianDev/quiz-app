@@ -10,10 +10,19 @@ const physicsQuestions = [
 const historyQuestions = [
   { title: "Pyetja 1", text: "Cili udhëheqës shqiptar u quajt 'Atleti i Krishtërimit'?", answers: ["Gjergj Kastrioti Skënderbeu", "Ali Pashë Tepelena"], correct: "Gjergj Kastrioti Skënderbeu" },
   { title: "Pyetja 2", text: "Cila ngjarje në 1789 shënoi fillimin e Revolucionit Francez?", answers: ["Rënia e Bastijës", "Traktati i Versajës"], correct: "Rënia e Bastijës" },
-  { title: "Pyetja 3", text: "Kush ishte perandori që kurorëzoi veten në 1804 si Napoleon I?", answers: ["Napoleon Bonaparte", "Luigji XVI"], correct: "Napoleon Bonaparte" },
-  { title: "Pyetja 4", text: "Cila luftë midis 1337 dhe 1453 u zhvillua kryesisht mes Anglisë dhe Francës?", answers: ["Lufta Njëqindvjeçare", "Lufta Tridhjetëvjeçare"], correct: "Lufta Njëqindvjeçare" },
+  { title: "Pyetja 3", text: "Kush ishte perandori që kurorëzoi veten në 1804 si Napoleon I?", answers: ["Luigji XVI", "Napoleon Bonaparte"], correct: "Napoleon Bonaparte" },
+  { title: "Pyetja 4", text: "Cila luftë midis 1337 dhe 1453 u zhvillua kryesisht mes Anglisë dhe Francës?", answers: ["Lufta Tridhjetëvjeçare", "Lufta Njëqindvjeçare"], correct: "Lufta Njëqindvjeçare" },
   { title: "Pyetja 5", text: "Cili traktat në 1648 i dha fund Luftës Tridhjetëvjeçare në Evropë?", answers: ["Traktati i Vestfalisë", "Traktati i Tordesillas"], correct: "Traktati i Vestfalisë" },
-  { title: "Pyetja 6", text: "Kush udhëhoqi Anglinë gjatë Luftës së Dytë Botërore si kryeministër?", answers: ["Winston Churchill", "Neville Chamberlain"], correct: "Winston Churchill" }
+  { title: "Pyetja 6", text: "Kush udhëhoqi Anglinë gjatë Luftës së Dytë Botërore si kryeministër?", answers: ["Neville Chamberlain", "Winston Churchill"], correct: "Winston Churchill" }
+];
+
+const geographyQuestions = [
+  { title: "Pyetja 1", text: "Cili është mali më i lartë në Ballkan?", answers: ["Musala", "Olimpi"], correct: "Musala" },
+  { title: "Pyetja 2", text: "Cili qytet shqiptar ndodhet më afër Detit Adriatik?", answers: ["Durrësi", "Shkodra"], correct: "Durrësi" },
+  { title: "Pyetja 3", text: "Cili është lumi më i gjatë në Evropë?", answers: ["Volga", "Danubi"], correct: "Volga" },
+  { title: "Pyetja 4", text: "Cili është kryeqyteti i Islandës?", answers: ["Rejkjaviku", "Oslo"], correct: "Rejkjaviku" },
+  { title: "Pyetja 5", text: "Cili vend nordik është i famshëm për shfaqjen e Aurorës Boreale pranë Qarkut Arktik?", answers: ["Norvegjia", "Danimarka"], correct: "Norvegjia" },
+  { title: "Pyetja 6", text: "Cili është oqeani më i madh në botë?", answers: ["Oqeani Paqësor", "Oqeani Atlantik"], correct: "Oqeani Paqësor" }
 ];
 
 let currentQuestion = 0;
@@ -79,6 +88,19 @@ function startHistory() {
   currentQuestion = 0;
   score = 0;
   currentQuestions = historyQuestions; // Vendos Historinë si aktive
+  showQuestion(currentQuestion, currentQuestions);
+}
+
+function startGeography() {
+  const topicZone = document.getElementById("topic-zone");
+  const questionZone = document.getElementById("question-zone");
+  const resultZone = document.getElementById("result-zone");
+  topicZone.style.display = "none";
+  questionZone.style.display = "block";
+  resultZone.style.display = "none";
+  currentQuestion = 0;
+  score = 0;
+  currentQuestions = geographyQuestions;
   showQuestion(currentQuestion, currentQuestions);
 }
 
