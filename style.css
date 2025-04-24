@@ -12,6 +12,12 @@ header {
   text-align: center;
 }
 
+main h2 {
+  text-align: center;
+  font-family: fangsong;
+  font-size: 27px;
+}
+
 .section {
   margin: 20px auto;
   padding: 20px;
@@ -21,13 +27,26 @@ header {
   text-align: center;
 }
 
-.section h2 {
-  margin: 0 auto 16px;
+.section h3:first-child {
+  font-size: 21px;
+  margin: 0 0 10px;
+  font-weight: normal;
+  color: #000;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section h3:not(:first-child) {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  font-weight: normal;
+  color: #000;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .section button {
   background-color: #666;
   color: #fff;
+  text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
   font-size: 13px;
   padding: 6px 12px;
   border: none;
@@ -42,7 +61,46 @@ header {
   cursor: pointer;
 }
 
-#question-zone,
-#result-zone {
+#question-zone, #result-zone {
   display: none;
+}
+
+#scores-display {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+#scores-display h4 {
+  color: #007015;
+  font-weight: normal;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+}
+
+#scores-display ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#scores-display li {
+  margin: 5px 0;
+}
+
+#scores-display li.pass {
+  color: #007015 !important;
+}
+
+#scores-display li.fail {
+  color: #c0392b !important;
+}
+
+#result-message {
+  font-size: 18px;
+}
+
+#result-message.pass {
+  color: #007015;
+}
+
+#result-message.fail {
+  color: #c0392b;
 }

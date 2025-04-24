@@ -7,14 +7,26 @@
 </head>
 <body>
   <header>
-    <h1>Kuiz Interaktiv Shkencor</h1>
+    <h1>Kuiz Interaktiv Edukativ</h1>
   </header>
   <main>
+    <h2>Zgjedhni lenden:</h2>
     <section class="section" id="topic-zone">
-      <h2>Zgjedhni lenden:</h2>
-      <button onclick="startPhysics()" id="physics">Fizike</button>
-      <button onclick="startHistory()" id="history">Histori</button>
-      <button onclick="startGeography()" id="geography">Gjeografi</button>
+      <h3>Shkenca Natyore</h3>
+      <div id="scores-display"></div>
+      <button onclick="startQuiz(physicsQuestions)" id="physics">Fizike</button>
+      <button onclick="startQuiz(biologyQuestions)" id="biology">Biologji</button>
+      <button onclick="startQuiz(geographyQuestions)" id="geography">Gjeografi</button>
+      
+      <h3>Shkenca Shoqerore</h3>
+      <button onclick="startQuiz(historyQuestions)" id="history">Histori</button>
+      <button onclick="startQuiz(psychologyQuestions)" id="psychology">Psikologji</button>
+      <button onclick="startQuiz(anthropologyQuestions)" id="anthropology">Antropologji</button>
+      
+      <h3>Disiplina Humaniste</h3>
+      <button onclick="startQuiz(literatureQuestions)" id="literature">Letersi</button>
+      <button onclick="startQuiz(philosophyQuestions)" id="philosophy">Filozofi</button>
+      <button onclick="startQuiz(visualArtsQuestions)" id="visualArts">Arte Vizuale</button>
     </section>
     
     <section class="section" id="question-zone">
@@ -27,9 +39,11 @@
       <button id="b2" data-answer=""></button>
     </section>
     
-    <section class="section" id="result-zone"></section>
+    <section class="section" id="result-zone">
+      <p id="result-message"></p>
+      <button onclick="startOver()" id="startAgain">Kthehu ne fillim</button>
+    </section>
   </main>
-  
   
   <script src="script.js"></script>
 </body>
