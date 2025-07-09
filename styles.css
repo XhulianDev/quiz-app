@@ -86,7 +86,7 @@ main h2 {
 }
 
 #scores-display li {
-  margin: 0.313rem 0;
+  margin: 5px 0;
 }
 
 #scores-display li.pass {
@@ -107,4 +107,39 @@ main h2 {
 
 #result-message.fail {
   color: #c0392b;
+}
+
+@media (max-width: 1080px) {
+  body { margin: 0; padding: 0; height: auto; }
+  header { padding: 0.125rem 0.375rem; }
+  h1 { font-size: 2rem; }
+  main h2 { font-size: 1.75rem; }
+  .section { max-width: 60%; }
+}
+
+@media (max-width: 720px) {
+  h1 { font-size: 1.9rem; }
+  main h2 { font-size: 1.688rem; }
+  .section { max-width: 70%; }
+  .section button { min-width: 6.25rem; padding: 0.313rem 0.625rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  main h2 { font-size: 1.625rem; }
+  .section { max-width: 86%; }
+  .section h3:first-child { font-size: 1.188rem; }
+  .section h3:not(:first-child) { font-size: 1.125rem; }
+}
+
+@media (max-width: 380px) {
+  h1 { font-size: 1.6rem; }
+  .section button { display: block; width: 6.875rem; padding: 0.25rem 0.375rem; margin: 0.25rem auto; }
+}
+
+@media (max-width: 260px) {
+  h1 { font-size: 1.5rem; }
+  main h2 { font-size: 1.25rem; }
+  .section { max-width: 70%; }
+  .section button { min-width: 52%; }
 }
