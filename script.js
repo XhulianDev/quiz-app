@@ -83,7 +83,6 @@ let currentQuestion = 0;
 let score = 0;
 let currentQuestions = physicsQuestions;
 
-// Fshi sessionStorage kur faqja ngarkohet
 document.addEventListener("DOMContentLoaded", () => {
   const keys = [
     "physicsPercentage",
@@ -97,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "visualArtsPercentage"
   ];
   keys.forEach(key => sessionStorage.removeItem(key));
-  updateScoresDisplay(); // Përditëso #scores-display për të treguar se rezultatet janë fshirë
+  updateScoresDisplay();
 });
 
 function updateScoreDisplay() {
@@ -183,7 +182,7 @@ button1.addEventListener("click", () => {
     updateScoreDisplay();
   } else {
     correctAnswer.textContent = "Gabim!";
-    correctAnswer.style.color = "red";
+    correctAnswer.style.color = "#cc0a11";
   }
   button1.disabled = true;
   button2.disabled = true;
@@ -247,4 +246,14 @@ button2.addEventListener("click", () => {
       resultMessage.className = percentage >= 50 ? "pass" : "fail";
     }, 1000);
   }
+});
+
+document.getElementById("home-link").addEventListener("click", (e) => {
+  e.preventDefault();
+  setTimeout(() => {
+    startOver();
+    document.getElementById("topic-zone").style.display = "block";
+    document.getElementById("question-zone").style.display = "none";
+    document.getElementById("result-zone").style.display = "none";
+  }, 200);
 });

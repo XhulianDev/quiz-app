@@ -7,9 +7,19 @@ body {
 
 header {
   background-color: #333;
-  color: white;
+  color: #fff;
   padding: 0.625rem;
   text-align: center;
+}
+
+#home-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 #home-link:hover {
+  color: #c9c6c3;
+  cursor: pointer;
 }
 
 #result-zone, #question-zone {
@@ -61,7 +71,7 @@ main h2 {
 
 .section button:hover {
   background-color: #555;
-  color: #cc0a11;
+  color: #c9c6c3;
   cursor: pointer;
 }
 
