@@ -1,22 +1,27 @@
 # Quiz App
 
-Aplikacion per te testuar njohurite ne lende te ndryshme me nje eksperience interaktive.
+An interactive quiz application designed to test knowledge across various subjects.
 
-## Pershkrim
-Pyetje nga:
-- Shkenca Natyrore: Fizike, Biologji, Gjeografi
-- Shkenca Shoqerore: Histori, Psikologji, Antropologji
-- Humaniste: Letersi, Filozofi, Arte Vizuale
-I optimizuar per te gjitha pajisjet.
+## Description
 
-## Teknologji
-- HTML5
-- CSS3
-- JavaScript
+This application features questions from a diverse range of fields:
+* **Natural Sciences:** Physics, Biology, Geography
+* **Social Sciences:** History, Psychology, Anthropology
+* **Humanities:** Literature, Philosophy, Visual Arts
+
+It is optimized for all devices, ensuring a **responsive user experience**.
+
+## Technologies Used
+
+* **HTML5**: For structuring the core content.
+* **CSS3**: For styling and layout.
+* **JavaScript**: For all interactive functionalities and quiz logic.
 
 ## Demo
-[Shiko Live](https://XhulianDev.github.io/quiz-app/)
 
-## Kontakti
-- Email: [xhulianazemi9@gmail.com](mailto:xhulianazemi9@gmail.com)
-- GitHub: [XhulianDev](https://github.com/XhulianDev)
+[View Live](https://XhulianDev.github.io/quiz-app/)
+
+## Contact
+
+* Email: [xhulianazemi9@gmail.com](mailto:xhulianazemi9@gmail.com)
+* GitHub: [XhulianDev](https://github.com/XhulianDev)
