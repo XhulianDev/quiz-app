@@ -7,6 +7,7 @@ let currentTopicKey = '';
 
 const topicBtns = document.querySelectorAll('.topic-btn');
 const questionZone = document.getElementById('question-zone');
+const resultZone = document.getElementById('result-zone');
 const topicZone = document.getElementById('topic-zone');
 const btn1 = document.getElementById('b1');
 const btn2 = document.getElementById('b2');
@@ -39,4 +40,45 @@ function showQuestion() {
   });
 
   document.getElementById('answer').textContent = '';
+}
+
+[btn1, btn2].forEach(button => {
+  button.addEventListener('click', () => {
+    const feedback = document.getElementById('answer');
+    const isCorrect = button.dataset.answer === currentQuestions[currentQuestion].correct;
+
+    if (isCorrect) {
+      feedback.textContent = 'Saktë!';
+      feedback.style.color = '#007015';
+      score++;
+    } else {
+      feedback.textContent = 'Gabim!';
+      feedback.style.color = '#cc0a11';
+    }
+
+    btn1.disabled = true;
+    btn2.disabled = true;
+
+    setTimeout(() => {
+      if (currentQuestion < currentQuestions.length - 1) {
+        currentQuestion++;
+        showQuestion();
+      } else {
+        finishQuiz();
+      }  
+    }, 1000);
+  });
+});
+
+function finishQuiz() {
+  questionZone.style.display = 'none';
+  resultZone.style.display = 'block';
+
+  const percentage = ((score / currentQuestions.length) * 100).toFixed(2);
+
+  sessionStorage.setItem(`${currentTopicKey}Percentage`, percentage);
+
+  const resultMessage = document.getElementById('result-message');
+  resultMessage.textContent = `Kuizi mbaroi! Pikët: ${score}/${currentQuestions.length} (${percentage}%)`;
+  resultMessage.className = percentage >= 50 ? 'pass' : 'fail';
 }
