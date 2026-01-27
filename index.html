@@ -15,19 +15,19 @@
     <section class="section" id="topic-zone">
       <h3>Shkenca Natyore</h3>
       <div id="scores-display"></div>
-      <button onclick="startQuiz(physicsQuestions)" id="physics">Fizikë</button>
-      <button onclick="startQuiz(biologyQuestions)" id="biology">Biologji</button>
-      <button onclick="startQuiz(geographyQuestions)" id="geography">Gjeografi</button>
+      <button class="topic-btn" data-topic="physics">Fizikë</button>
+      <button class="topic-btn" data-topic="biology">Biologji</button>
+      <button class="topic-btn" data-topic="geography">Gjeografi</button>
       
       <h3>Shkenca Shoqërore</h3>
-      <button onclick="startQuiz(historyQuestions)" id="history">Histori</button>
-      <button onclick="startQuiz(psychologyQuestions)" id="psychology">Psikologji</button>
-      <button onclick="startQuiz(anthropologyQuestions)" id="anthropology">Antropologji</button>
+      <button class="topic-btn" data-topic="history">Histori</button>
+      <button class="topic-btn" data-topic="psychology">Psikologji</button>
+      <button class="topic-btn" data-topic="anthropology">Antropologji</button>
       
       <h3>Disiplina Humaniste</h3>
-      <button onclick="startQuiz(literatureQuestions)" id="literature">Letërsi</button>
-      <button onclick="startQuiz(philosophyQuestions)" id="philosophy">Filozofi</button>
-      <button onclick="startQuiz(visualArtsQuestions)" id="visualArts">Arte Vizuale</button>
+      <button class="topic-btn" data-topic="literature">Letërsi</button>
+      <button class="topic-btn" data-topic="philosophy">Filozofi</button>
+      <button class="topic-btn" data-topic="visualArts">Arte Vizuale</button>
     </section>
     
     <section class="section" id="question-zone">
@@ -42,10 +42,10 @@
     
     <section class="section" id="result-zone">
       <p id="result-message"></p>
-      <button onclick="startOver()" id="startAgain">Kthehu në fillim</button>
+      <button id="startAgain">Kthehu në fillim</button>
     </section>
   </main>
   
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
