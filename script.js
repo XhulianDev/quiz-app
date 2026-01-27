@@ -55,7 +55,7 @@ const anthropologyQuestions = [
 const literatureQuestions = [
   { title: "Pyetja 1", text: "Kush është autori i 'Lahuta e Malcis'?", answers: ["Naim Frashëri", "Gjergj Fishta"], correct: "Gjergj Fishta" },
   { title: "Pyetja 2", text: "Cila është vepra më e famshme e Shekspirit?", answers: ["Don Kishoti", "Hamleti"], correct: "Hamleti" },
-  { title: "Pyetja 3", text: "Kush shkroi 'Këngët e Milosaos'?", answers: ["Jeremi Visari", "Migjeni"], correct: "Jeremi Visari" },
+  { title: "Pyetja 3", text: "Kush shkroi 'Këngët e Milosaos'?", answers: ["Jeronim de Rada", "Migjeni"], correct: "Jeronim de Rada" },
   { title: "Pyetja 4", text: "Në cilin shekull u shkrua 'Divine Comedy' nga Dante?", answers: ["XVII", "XIV"], correct: "XIV" },
   { title: "Pyetja 5", text: "Cili poet shqiptar quhet 'Poeti i Mërgimit'?", answers: ["Fan Noli", "Migjeni"], correct: "Migjeni" },
   { title: "Pyetja 6", text: "Cila vepër e Homerit tregon luftën e Trojës?", answers: ["Iliada", "Odisea"], correct: "Iliada" }
@@ -219,7 +219,7 @@ button2.addEventListener("click", () => {
     updateScoreDisplay();
   } else {
     correctAnswer.textContent = "Gabim!";
-    correctAnswer.style.color = "red";
+    correctAnswer.style.color = "#cc0a11";
   }
   button1.disabled = true;
   button2.disabled = true;
