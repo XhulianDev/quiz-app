@@ -11,6 +11,7 @@ const resultZone = document.getElementById('result-zone');
 const topicZone = document.getElementById('topic-zone');
 const btn1 = document.getElementById('b1');
 const btn2 = document.getElementById('b2');
+const startAgainBtn = document.getElementById('startAgain');
 
 topicBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -82,3 +83,8 @@ function finishQuiz() {
   resultMessage.textContent = `Kuizi mbaroi! Pikët: ${score}/${currentQuestions.length} (${percentage}%)`;
   resultMessage.className = percentage >= 50 ? 'pass' : 'fail';
 }
+
+startAgainBtn.addEventListener('click', () => {
+  resultZone.style.display = 'none';
+  topicZone.style.display = 'block';
+});
