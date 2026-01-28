@@ -87,4 +87,39 @@ function finishQuiz() {
 startAgainBtn.addEventListener('click', () => {
   resultZone.style.display = 'none';
   topicZone.style.display = 'block';
+  updateScoreDisplay();
 });
+
+function updateScoreDisplay() {
+  const subjects = [
+    { name: "Fizikë", key: "physicsPercentage" },
+    { name: "Biologji", key: "biologyPercentage" },
+    { name: "Gjeografi", key: "geographyPercentage" },
+    { name: "Histori", key: "historyPercentage" },
+    { name: "Psikologji", key: "psychologyPercentage" },
+    { name: "Antropologji", key: "anthropologyPercentage" },
+    { name: "Letërsi", key: "literaturePercentage" },
+    { name: "Filozofi", key: "philosophyPercentage" },
+    { name: "Arte Vizuale", key: "visualArtsPercentage" }
+  ];
+
+  let hasResults = false;
+  let scoresList = "<ul>";
+
+  subjects.forEach(subject => {
+    const percentage = sessionStorage.getItem(subject.key);
+    if (percentage) {
+      hasResults = true;
+      const className = parseFloat(percentage) >= 50 ? 'pass' : 'fail';
+      scoresList += `<li class='${className}'>${subject.name}: ${percentage}%</li>`;
+    }
+  });
+
+  scoresList += "</ul>";
+  const displayDiv = document.getElementById("scores-display");
+  if (displayDiv) {
+    displayDiv.innerHTML = hasResults ? `<h4>Arritjet tuaja:</h4>${scoresList}` : '';
+  }
+}
+
+updateScoreDisplay();
