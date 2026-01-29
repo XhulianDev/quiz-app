@@ -36,17 +36,19 @@ main h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75rem;
-  margin: 0 1rem;
+  gap: 0.5rem;
+  margin: 0 1rem 2rem;
 }
 
 .section {
   margin: 2rem auto;
-  padding: 0.25rem 0 1.5rem;
-  max-width: 80%;
+  padding: 0.25rem 2rem 2rem;
+  max-width: fit-content;
   border: 1px solid #2c3e50;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 }
 
 .section h3:first-child {
@@ -70,8 +72,9 @@ main h2 {
   color: #fff;
   font-weight: 600;
   text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
-  font-size: 0.938rem;
+  font-size: 1rem;
   padding: 0.4375rem 0.5rem;
+  margin-right: 0.125rem;
   border: none;
   min-width: 7.5rem;
   border-radius: 4px;
@@ -80,7 +83,7 @@ main h2 {
 }
 
 .section button:hover {
-  background-color: #444;
+  background-color: #334659;
   color: #c9c6c3;
   transform: translateY(-2px);
 }
@@ -136,19 +139,29 @@ main h2 {
   color: #c0392b;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 580px) {
+  .section { padding: 0.25rem 0 2rem; }
+  .btn-group { flex-wrap: nowrap; }
+  .section button { width: 6.25rem; min-width: auto; font-size: 0.875rem; }
+}
+
+@media (max-width: 380px) {
   .btn-group {
     flex-direction: column;
     align-items: center;
   }
 
   .section { 
-    max-width: 70%; 
-    padding: 1rem 0.5rem;
+    padding: 1rem 2rem 2rem;
   }
   
   .section button {
-    width: 100%;
-    max-width: 10rem;
+    width: 90%;
+    max-width: 12rem;
+  }
+
+  #b1, #b2 {
+    padding: 0.4375rem 0.8rem;
+    margin-bottom: 0.625rem;
   }
 }
