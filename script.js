@@ -1,5 +1,7 @@
 import { quizData } from './data.js';
 
+sessionStorage.clear();
+
 let currentQuestion = 0;
 let score = 0;
 let currentQuestions = [];
